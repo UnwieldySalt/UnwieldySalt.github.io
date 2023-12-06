@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>  <!-- All meta data is created using the '!' followed by an enter key press-->
+<html lang="en"> <!-- Establishes the language of the Website, Good for search engine optimization-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="../MISC/photos//legoicon.png">      <!--The icon for the Webpage is the pizza icon saved in the root folder-->                                                                    
+    <link rel="stylesheet" type = "text/css" href = "../CSS/Style.css"> <!-- links the HTML website with the CSS website
+    since the css and html file are both in the same folder, I didn't have to provide an external link anywhere, link rel establishes a relationship between the html file and whatever file you are referencing (stylesheet means css), 
+    type = "text/css" also means that the file you are linking to is css, the href part of the code specifies the path to the css file (in this case I just used the name, as they are both in the same folder). -->        
+    <link rel="stylesheet" type = "text/css" href = "../CSS/CSSStyle.css">
+    <!--IMPORTANT, to modify any html element in a separate css file, you need to have that element associated with a name, or a class or use their tag.-->
+    <!--IMPORTANT, to use any html element as a variable in a separate javascript file, you need to have that element associated with a unique id.-->
+    <link rel="shortcut icon" href="../MISC/photos/pizzaicon.png">      <!--The icon for the Webpage is the lego icon saved in the root folder-->                                                                    
+
+</head>
+
+<body>
+    <!-- header -->
+    <header class="flexbox-header">
+        <div class="dropdown" ></div>
+            <button onclick="dropDownMenu()" class="drop_button"></button>   
+        </div>
+        <button class="flexbox-item home-button" type="button" onclick="changeToHomePage()">Home Page</button>
+        <button class="flexbox-item product-button" type="button" onclick="changeToProductPage()">Store</button>
+        <button class="flexbox-item about-button" type="button" onclick="changeToAboutPage()">About Us</button>
+        <button class="flexbox-item Contact-button" type="button" onclick="changeToContactPage()">Contact</button>
+        <button class="flexbox-item2" id="Basket-button" type="button" onclick="changeToContactPage()">Basket</button>
+    </header> 
+    <!-- end of header -->
+    
+    <h1>Contact us.</h1>  <!--The main header. -->
+    <h2> What can we help you with:</h2>  <!--The sub header. -->
+
+    <!--The clickable elements that will have text in them so that they may provide the end user relevant information. -->
+    <!--They have all been assigned the "clickable_elements" class so that I can modify all 3 in one go in css. -->
+    <p class = "clickable_elements" id = "Lego-button">Lego Tutorials</p>
+    <p class = "clickable_elements" id = "Refund-button">Refunds</p>
+    <p class = "clickable_elements" id = "Hazards-button">Important Hazards</p> 
+    <br><br><br>
+    
+    
+    <div class = "lego_popup" id = "lego_popup">  <!-- Creating a lego_popup div class that includes the heading, title, and body of this popup. Each have different classes and ids, which will be used later in css and javascript for visual editing and button linking-->
+        <div class = lego_popup_header>
+            <div class = lego_popup_title> Lego Tutorials.</div>
+            <button class = "close-button1">&times;</button>  <!-- close-button1 is a button created using button tag, this will be used in javascript to close lego_popup-->
+        </div>
+     
+        <div class = lego_popup_body>
+           Here are some cool Ideas you can explore with your next lego set.
+           <br><br>
+           <iframe width = "320" height= "245" src = ""></iframe> <!-- Using the iframe tag to include a video in this webpage, specifically for this popup. -->
+        </div>
+    </div>
+
+    <div class = "hazards_popup" id = "hazards_popup">
+        <div class = hazards_popup_header>
+            <div class = hazards_popup_title> Important Hazards.</div>
+            <button class = "close-button2">&times;</button>
+        </div>
+        <!-- creates a pop up -->
+        <div class = hazards_popup_body>
+            There are many pieces in a Lego Set that may be cause of harm for 
+            children under the age of 10. <br> <br>
+            Potential hazards could be a result from:<br>
+            1. Ingestion of small lego pieces <br>
+            2. Injuries due to pointy lego pieces <br>
+            3. Injuries resulting from electrical components in a set. <br><br>
+            Please look out for for warning labels such as this one to make to
+            assess the safety of a specific set for your child.<br><br>
+            <img src="../Misc/photos/warningicon.jpg" height="100" width="100" alt="A warning symbol on packages with potentially harmful parts.">
+        </div>
+    </div>
+
+    <div class = "refund_popup" id = "refund_popup"> 
+        <div class = refund_popup_header>
+            <div class = refund_popup_title> Refund Policy.</div>
+            <button class = "close-button3">&times;</button>
+        </div>
+     
+        <div class = refund_popup_body>
+        <br><br>
+           You can opt for a refund using the form below, though do keep in  mind,
+           refunds are only offered for sealed(unopened) Lego sets, if you opened
+           your lego set, then it won't be eligible for a refund.
+        </div>
+    </div>
+
+    <div class = "overlay-class" id = "overlay"></div>
+    
+    <form name = "Form" method = "get" >  <!--I established the form name as "form" so that I can use it as an identifier for this form in CSS. Method = get means that the info received through this form is more secure,-->
+    <fieldset>                        <!--fieldset starts a border around the form. -->
+        <br>
+        <label class = "label1">  <!--I attached a class to the label (label is just the descriptive text before the inputs of the form). -->
+            Type your information below:
+        </label>
+        <div class = "form_options" id = "UserInfo">  <!--Establishing the 3 form inputs below (name, email and phone) as one div function, so that I can use that one div class to universally influence all of them in CSS efficiently without referencing them individually-->
+            <p>Name:&nbsp; <input type="text" required maxlength="20" placeholder ="please type your Name."></p> <!-- Name. The required tag makes these inputs compulsory for the user to fill before submitting.-->
+            <p>Email:&nbsp; <input type="text" required maxlength="35" placeholder="please type your Email."></p> <!-- Email.-->
+            <p>Phone:&nbsp; <input type="tel" required maxlength="12" placeholder="please type your Number."></p> <!-- Phone.-->
+        </div>
+        <br>
+
+        <label for="helpOptions" class = "label2">  <!--Adding a label for the second part of this form, the class (label2) will help me identify it in CSS. -->
+            What can we help you with:
+        </label>
+        &nbsp;  <!--&nbsp; literally means space, as in the result you get when you click "space-bar" in word. -->
+            <select id="helpOptions" name="helpOptions">   <!--The select tag starts the list -->
+            <option value="Order Status">Order Status</option>
+            <option value="Billing & Payments">Billing & Payments</option>
+            <option value="Business Inquiries">Business Inquiries</option>
+            <option value="Refunds">Refunds</option>
+            <option value="None of the above" selected>None of the above</option>   <!--The selected sub tag (under option value) makes this element the default selection. -->
+            </select><br><br>   <!--The <br> function means a line break. -->
+            <textarea name ="CustomComment" maxlength = "450" ></textarea><br>  <!--the textarea function makes a text box that the user can write in, the placeholder value allows you to write a description in the text box itself telling the user what it is for. -->
+            <br>
+            <input type = "checkbox" name = "check">&nbsp;<p class = "point"> Check this box to write send a custom inquiry.</p><br><br>  <!--checkbox input type makes a checkbox -->
+                
+            <input type="submit" value="Submit" name = "submit">  <!--submit input type gives user a submit option that, when clicked, sends the filled data to a server in .php format -->
+
+    </fieldset>
+    </form>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!-- footer -->
+    <footer class="flexbox-header">
+        <button class="flexbox-item" type="button" onclick="">Contact</button>
+        <button class="flexbox-item" type="button" onclick="">Location: 123 Street .st On</button>
+    </footer>
+    <script src="../JAVASCRIPT/Script.js "></script>  <!-- This links the javascript file in the same folder (Script.js) with this html file, the reason this is at the end of the body tag, is so that the webpage may appear to load faster.-->
+    <script defer src="../JAVASCRIPT/globalHeaderFooter.js"></script>
+</body>
+</html>
+

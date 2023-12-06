@@ -1,0 +1,365 @@
+html{
+background-image: url(Lego_Background.jpg);
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  /*font-family sets the font type*/
+text-align: center; /*text-align aligns everything*/
+font-size: 18px;    /*font-size changes the font size of all the text in the html file*/
+}
+
+.page_intro{
+    border: 10px outset;    /*the border: can set 3 things at once, width, style and color. I used border: 10px, outset. This means that I set the border's width(all 4 corners) to 10px and I set the border style to "Outset".*/
+    border-radius: 5px;     /*this if increased rounds the corners of the border, if decreased sharpens them, more radius = rounder, less = rectangle*/
+    padding: 10px;          /*adds space between the edges of the border and the text present inside of it*/
+    background-color: white;
+    cursor: default;
+}
+
+.intro_paragraph{
+
+    display: inline-block;
+    border: outset 5px;
+    padding: 5px;
+    margin-right: 10%;
+    margin-left: 10%;
+    background-color: rgba(235, 255, 255, 0.7);
+    font-style: italic;
+    font-weight: bold;
+    min-width: 500;
+    cursor: default;
+}
+
+.product_border{
+
+    display: inline-block;
+    border: outset 10px;
+    border-radius: 5px;
+    background-color:rgb(224, 200, 200);
+    padding: 30px;
+}
+
+.product_title{
+    display: inline;
+    border: 5px inset ;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: whitesmoke;
+    font-weight: bold;
+    cursor: default;
+}
+
+.main-products{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+}
+
+.all_product-info{
+    display: flex;
+}
+
+.mario-product, .mario-product-info{
+    width: 200px;
+}
+
+.mario-product{
+
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.mario-product img{
+
+    transition: transform .2s ease-in-out;
+
+}
+
+.mario-product img:hover{
+
+    transform: translate(0, -200px);
+}
+
+.mario-product-info{
+
+    display: flex;
+    flex-flow:column-reverse;
+}
+
+.mario-price{
+    font-style: italic;
+    font-weight: bolder;
+    cursor: default;
+    transform: translate(0, 0px);
+    
+}
+
+.add-to-cart-mario{
+    transform: translate(0, 15px);
+    display: inline-block;
+    border: solid 2px black;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: blanchedalmond;
+    cursor: pointer;
+}
+
+.van-gogh-product{
+
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.van-gogh-product, .van-gogh-product-info{
+    width: 200px;
+}
+
+.van-gogh-product img{
+
+    transition: transform .2s ease-in-out;
+
+}
+
+.van-gogh-product img:hover{
+
+    transform: translate(0, -200px);
+}
+
+.van-gogh-product-info{
+
+    display: flex;
+    flex-flow:column-reverse;
+}
+
+.van-gogh-price{
+    font-style: italic;
+    font-weight: bolder;
+    cursor: default;
+    transform: translate(0,0px);
+}
+
+.add-to-cart-van-gogh{
+    transform: translate(0, 8px);
+    display: inline-block;
+    border: solid 2px black;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: blanchedalmond;
+    cursor: pointer;
+}
+
+.pirates-product{
+
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.pirates-product img{
+
+    transition: transform .2s ease-in-out;
+
+}
+
+.pirates-product img:hover{
+
+    transform: translate(0, -200px);
+}
+
+.pirates-product-info{
+
+    display: flex;
+    flex-flow:column-reverse;
+}
+
+.pirates-product, .pirates-product-info{
+    width: 200px;
+}
+
+.pirates-price{
+    font-style: italic;
+    font-weight: bolder;
+    cursor: default;
+    transform: translate(0,0px);
+    
+}
+
+.add-to-cart-pirates{
+    transform: translate(0, 8px);
+    display: inline-block;
+    border: solid 2px black;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: blanchedalmond;
+    cursor: pointer;
+ 
+}
+
+.accessory_border{
+    display: inline-block;
+    border: outset 10px;
+    border-radius: 5px;
+    background-color:rgb(224, 200, 200);
+    padding: 30px;
+}
+
+.accessory_title{
+    display: inline;
+    border: 5px inset ;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: whitesmoke;
+    font-weight: bold;
+    cursor: default;
+}
+
+.main-accessories{
+
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.accessory1{
+
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.accessory1 img{
+
+    transition: transform .2s ease-in-out;
+
+}
+
+.accessory1 img:hover{
+
+    transform: translate(0, -200px);
+}
+
+.all_accessory-info{
+    display: flex;
+}
+
+.accessory1-info{
+
+    display: flex;
+    flex-flow:column-reverse;
+}
+
+.accessory1-price{
+    font-style: italic;
+    font-weight: bolder;
+    cursor: default;
+    transform: translate(0, 0px);
+    
+}
+
+.add-to-cart-accessory1{
+    transform: translate(0, 8px);
+    display: inline-block;
+    border: solid 2px black;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: blanchedalmond;
+    cursor: pointer;
+}
+
+.accessory1, .accessory1-info{
+    width: 200px;
+}
+
+.accessory2{
+
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.accessory2 img{
+
+    transition: transform .2s ease-in-out;
+
+}
+
+.accessory2 img:hover{
+
+    transform: translate(0, -200px);
+}
+
+.accessory2-info{
+
+    display: flex;
+    flex-flow:column-reverse;
+}
+
+.accessory2-price{
+    font-style: italic;
+    font-weight: bolder;
+    cursor: default;
+    transform: translate(0,0px);
+    
+}
+
+.add-to-cart-accessory2{
+    transform: translate(0, 8px);
+    display: inline-block;
+    border: solid 2px black;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: blanchedalmond;
+    cursor: pointer;
+}
+
+.accessory2, .accessory2-info{
+    width: 200px;
+}
+
+.accessory3{
+
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.accessory3 img{
+
+    transition: transform .2s ease-in-out;
+
+}
+
+.accessory3 img:hover{
+
+    transform: translate(0, -200px);
+}
+
+.accessory3-info{
+
+    display: flex;
+    flex-flow:column-reverse;
+}
+
+.accessory3-price{
+    font-style: italic;
+    font-weight: bolder;
+    cursor: default;
+    transform: translate(0,0px);
+    
+}
+
+.add-to-cart-accessory3{
+    transform: translate(0, 8px);
+    display: inline-block;
+    border: solid 2px black;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: blanchedalmond;
+    cursor: pointer;
+}
+
+.accessory3, .accessory3-info{
+    width: 200px;
+}

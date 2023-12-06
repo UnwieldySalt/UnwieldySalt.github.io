@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home Page</title>	    <!--title-->
+    <link rel="stylesheet" href="../CSS/CSSStyle.css"> 
+    <link rel="stylesheet" href="../CSS/Style.css"> 
+
+    <link rel="stylesheet" href="../CSS/CSSBasket.css"> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="../JAVASCRIPT/globalHeaderFooter.js"></script>
+    <script defer src="../JAVASCRIPT/Storescript.js"></script>
+</head>
+<body>
+
+    <header class="flexbox-header">
+        <div class="dropdown" >
+            <button onclick="dropDownMenu()" class="drop_button"></button>   
+        </div>
+        <button class="flexbox-item" id="home-button" type="button" onclick="changeToHomePage()">Home Page</button>
+        <button class="flexbox-item" id="product-button" type="button" onclick="changeToProductPage()">Store</button>
+        <button class="flexbox-item" id="about-button" type="button" onclick="changeToAboutPage()">About Us</button>
+        <button class="flexbox-item" id="Contact-button" type="button" onclick="changeToContactPage()">Contact</button>
+        <button class="flexbox-item2" href="#" id="Basket-button" type="button" onclick="basket_load()">Basket</button>
+    </header> 
+    <div id="basket-popup-window">
+        <h2>Basket</h2>
+        <p id="test">marioCart</p>
+        
+        <button id="close-basket">Close</button>
+    </div>        
+
+    <h1 class="center-text">Featured Items</h1>
+
+    <fieldset>
+        <div class="flexbox-show-items-container">
+            <div>
+                <div class="flexbox-show-picture">
+                    <img src="../Misc/photos/space.png" height="220">
+                </div>
+                <div class="item-side">
+                    <button class="item-buy-button" id="item-buy-now" type="button" onclick="">
+                        Buy Now
+                    </button>
+                    <button class="item-buy-button" id="item-add-cart" type="button" onclick="">
+                        Add to Basket
+                    </button>
+                </div>
+            </div>
+            <div>
+                <div class="item-discription">
+                    Sail the seven seas to find the treasure hidden on the pirate island hideout, with this new Lego set from 
+                    "Pirate of The Caribbean". Be careful though as the Imperials are right behind you. Try to make
+                     it to the raft on the edge of the island to escape with the treasure before you get found.
+                </div>
+                <!-- <div class="item-side">
+                    <button class="item-buy-button" id="item-buy-now" type="button" onclick="">
+                        Buy Now
+                    </button>
+                    <button class="item-buy-button" id="item-add-cart" type="button" onclick="">
+                        Add to Basket
+                    </button>
+                </div> -->
+            </div>
+        </div>
+    </fieldset>
+    &nbsp; 
+    &nbsp;
+    &nbsp;
+    <fieldset>
+        <div class="flexbox-show-items-container">
+            <div>
+                <div class="flexbox-show-picture">
+                    <img src="../Misc/photos/potc.png" height="220">
+                </div>
+                <div class="item-side">
+                    <button class="item-buy-button" id="item-buy-now" type="button" onclick="">
+                        Buy Now
+                    </button>
+                    <button class="item-buy-button" id="item-add-cart" type="button" onclick="">
+                        Add to Basket
+                    </button>
+                </div>
+            </div>
+            <div class="item-discription">
+                Take to the skys with this spaceship and explore the galaxy. This spaceship 
+                can take you anywhere you can imagine, with your crew. Explore planets and stars 
+                and discover ancient fallen civilizations and creatures. Be sure to be careful
+                as too not crash the plane.
+            </div>
+        </div>
+    </fieldset>
+    <br>
+    <br>
+    <h2 class="h2">Upcoming News</h2>
+    <br>
+    <fieldset>
+        <p class="form_options">There is nothing at the moment.</p>
+       <p class="lable1"> Stay tuned for further announcement</p> 
+    </fieldset>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <footer class="flexbox-header">
+        <button class="flexbox-item" type="button" onclick="">Contact</button>
+        <button class="flexbox-item" type="button" onclick="">Location: 123 Street .st On</button>
+    </footer>
+    
+</body>
+</html>

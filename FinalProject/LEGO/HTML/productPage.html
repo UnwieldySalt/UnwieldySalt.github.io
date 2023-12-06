@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type = "text/css" href = "../CSS/StoreStyle.css">
+    <link rel="stylesheet" type = "text/css" href = "../CSS/CSSBasket.css">
+    <link rel="shortcut icon" href="../Misc/photos/legoicon.png">      <!--The icon for the Webpage is the lego icon saved in the root folder-->                                                                    
+    <script defer src="../JAVASCRIPT/globalHeaderFooter.js"></script>
+    <link rel="stylesheet" href="../CSS/CSSStyle.css"> 
+    <script defer src="../JAVASCRIPT/Storescript.js"></script>
+
+</head>
+
+<body>
+    <header class="flexbox-header">
+        <div class="dropdown" >
+            <button onclick="dropDownMenu()" class="drop_button"></button>   
+        </div>
+        <button class="flexbox-item" id="home-button" type="button" onclick="changeToHomePage()">Home Page</button>
+        <button class="flexbox-item" id="product-button" type="button" onclick="changeToProductPage()">Store</button>
+        <button class="flexbox-item" id="about-button" type="button" onclick="changeToAboutPage()">About Us</button>
+        <button class="flexbox-item" id="Contact-button" type="button" onclick="changeToContactPage()">Contact</button>
+        <button class="flexbox-item2" href="#" id="Basket-button" type="button" onclick="basket_load()">Basket</button>
+    </header> 
+    <div id="basket-popup-window">
+        <h2>Basket</h2>
+        <p id="marioadded"><span id="marioloadded"></span></p>
+        <p id="airloadded"><span id="airloadded"></span></p>
+        <p id="waterloadded"><span id="waterloadded"></span></p>
+        <p id="ass1loadded"><span id="ass1loadded"></span></p>
+        <p id="ass2loadded"><span id="ass2loadded"></span></p>
+        <p id="ass3loadded"><span id="ass3loadded"></span></p>
+        <button id="close-basket">Close</button>
+    </div>        
+
+    <h1 class = "page_intro">Products page.</h1>
+
+    <p class = "intro_paragraph">Welcome to our product page. We offer a variety of products for all age ranges and pop-culture enthusiasts.
+    We also offer accessories that can enhance your current lego piece, or replace broken/lost parts.
+    Please have a look at our finest selection:
+    <p>
+    <br>
+
+    <div class = "product_border">
+        <h3 class = "product_title">Lego Sets.</h3>
+        <br><br><br>
+        <div class = "main-products">
+            <div class = "mario-product">
+                <img src="../Misc/photos/mario.png" width="200" height="400" alt="mario-set">
+            </div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class = "van-gogh-product">
+                <img src="../Misc/photos/van.png" width="200" height="400" alt="van-gogh-set">
+            </div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class = "pirates-product">
+                <img src="../Misc/photos/pirates.png" width="200" height="400" alt="pirates-set">
+            </div>
+        </div>
+
+    <div class = all_product-info>
+        <div class = "mario-product-info">
+            <p class = mario-price> Price: 29.99 $CAD</p>
+            <!-- <p class = "add-to-cart-mario" href="#" id = "mario_cart"> Add to cart </p> -->
+            <button class="add-to-cart-mario" href="#" id="mario-cart" type="button" onclick="add1()">Basket</button>
+        </div>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <div class = "van-gogh-product-info">
+            <p class = van-gogh-price> Price: 29.99 $CAD</p>
+            <!-- <p class = "add-to-cart-van-gogh"> Add to cart </p> -->
+            <button class="add-to-cart-mario" href="#" id="van-gogh" type="button" onclick="add2()">Basket</button>
+        </div>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <div class = "pirates-product-info">
+            <p class = pirates-price> Price: 29.99 $CAD</p>
+            <!-- <p class = "add-to-cart-pirates"> Add to cart </p> -->
+            <button class="add-to-cart-mario" href="#" id="pirates" type="button" onclick="add3()">Basket</button>
+        </div>
+
+    </div>
+    </div>
+
+    <br><br>
+
+    <div class = "accessory_border">
+        <h3 class = "accessory_title">Lego Accessories.</h3>
+        <br><br><br>
+        <div class = "main-accessories">
+            <div class = "accessory1">
+                <img src="../Misc/photos/accessory1.png" width="200" height="400" alt="accessory1">
+            </div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class = "accessory2">
+                <img src="../Misc/photos/accessory2.png" width="200" height="400" alt="accessory2">
+            </div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class = "accessory3">
+                <img src="../Misc/photos/accessory3.png" width="200" height="400" alt="accessory3">
+            </div>
+        </div>
+
+    <div class = all_accessory-info>
+        <div class = "accessory1-info">
+            <p class = "accessory1-price"> Price: 4.99 $CAD</p>
+            <!-- <p class = "add-to-cart-accessory1"> Add to cart </p> -->
+            <button class="add-to-cart-mario" href="#" id="accessory1" type="button" onclick="add4()">Basket</button>
+        </div>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <div class = "accessory2-info">
+            <p class = "accessory2-price"> Price: 9.99 $CAD</p>
+            <!-- <p class = "add-to-cart-accessory2"> Add to cart </p> -->
+            <button class="add-to-cart-mario" href="#" id="accessory2" type="button" onclick="add5()">Basket</button>
+        </div>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <div class = "accessory3-info">
+            <p class = accessory3-price> Price: 4.99 $CAD</p>
+            <!-- <p class = "add-to-cart-accessory3"> Add to cart </p> -->
+            <button class="add-to-cart-mario" href="#" id="accessory3" type="button" onclick="add6()">Basket</button>
+        </div>
+
+    </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    
+    <footer class="flexbox-header">
+        <button class="flexbox-item" type="button" onclick="">Contact</button>
+        <button class="flexbox-item" type="button" onclick="">Location: 123 Street .st On</button>
+    </footer>
+
+    
+
+
+<script src="Storescript.js"></script>
+    
+</body>
+</html>
+

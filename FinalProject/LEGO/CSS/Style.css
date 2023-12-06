@@ -1,0 +1,275 @@
+/* whatever is in html tag gets applied throughout the whole document. */
+html{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  /*font-family sets the font type*/
+    text-align: center; /*text-align aligns everything*/
+    font-size: 18px;    /*font-size changes the font size of all the text in the html file*/
+    background-image: url(../MISC/photos/Lego_Background.jpg) ;
+    background-color:aquamarine;
+}
+#wrapper {
+    min-height: 100%;
+    position: relative;
+}
+
+/*whatever is inside the h1 tag applies to heading1 (Contact us)*/
+h1{
+    border: 10px outset;    /*the border: can set 3 things at once, width, style and color. I used border: 10px, outset. This means that I set the border's width(all 4 corners) to 10px and I set the border style to "Outset".*/
+    border-radius: 5px;     /*this if increased rounds the corners of the border, if decreased sharpens them, more radius = rounder, less = rectangle*/
+    padding: 10px;          /*adds space between the edges of the border and the text present inside of it*/
+    background-color: white;
+    cursor: default;
+}
+
+h2
+{
+    cursor: default;
+}
+
+/*whatever is inside the .clickable_elements tag applies to the 3 paragraphs with the .clickable_elements (Lego Tutorials, Important Hazards, Refunds)*/
+.clickable_elements {
+    display: inline;  /* Makes the 3 paragraphs display side by side horizontally */
+    margin-right: 35px;     /* adds distance between the three elements */
+    border: 5px inset ;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    background-color: white;
+    font-weight: bold;
+}
+
+/*Whatever is inside this tag will style the fieldset of our form.*/
+fieldset{
+    display:inline;   /*This will make the the borders of the form centered.*/
+    width: 500px;     /*sets the width of the fieldset*/
+    padding: 15px;
+    background-color: white;
+}
+
+.label1{      /*.label1 refers to the label1 class, which I set for the label associated with the 3 inputs (name, phone, email) in the html file*/
+/*whatever is inside the .label tag applies to that specific heading*/
+/*You use class to create identifiers which can then be used to identify said element of html in a css file, to then be styled as needed.*/
+    
+    font-style: italic;   /*font-style is for italics BUT NOT FOR BOLD (font - weight is for bold)*/
+    cursor: default;
+}
+
+.point
+{
+    display: inline;
+    cursor: default;
+}
+
+.form_options{  /*This is the class I created for the div class that contained the inputs: name, email and phone, in html*/
+                /*so whatever is in this tag will apply to those 3 elements.*/
+    font-weight: bold;
+    box-sizing: border-box;  /*border-sizing: border-box includes the padding and border in an element's total width and height.*/
+}
+
+input::placeholder{  /*all the placeholders created for the inputs (Name, email and Phone number) will be styled through this tag*/
+    text-align: center;
+}
+
+.label2{   /*The label2 class was associated with Label2 in html (the text that comes before the list) that will be styled under this tag.*/
+
+    font-style: italic;
+}
+
+#helpOptions{  /*Whenever you are using the 'id' instead of a class to identify an html element you use '#' instead of '.'*/
+
+    cursor: pointer;   /*This line of code makes the mouse pointer go from an 'arrow' to a 'pointing hand' (good for letting the user know that the element they are hovering over is clickable.*/
+}
+
+input[name = "check"]{
+    
+    cursor: pointer;
+}
+
+textarea[name = "CustomComment"]{   /*The text-box was named as "CustomComment" in the html file, hence that will be modified (size wise) through this tag*/
+
+    width: 400px;
+    height: 150px;
+}
+
+
+
+input[name = "submit"]{                         /*the placeholder created for the submit button (submit) will be styled through this tag*/
+
+    cursor: pointer;
+}
+
+.lego_popup {
+
+    position: fixed;                               /*this means that the position of this element will not change and be stuck to the screen and move with you when you scroll up or down*/
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 400px;
+    width: 500px;
+    max-width: 80%;                                /*sets a max width for this element, so if you scale the webpage externally, this element won't scale past 80% of the webpages width.*/
+                                                   /*effectively a combo of top:50%, left:50% and transform: translate(-50%, -50%) makes the element centered.*/
+    top: 50%;                                      /*Top 50% basically places the top edge of this element at 50% of the vertical height of the parent container (in this case, the webpage). In simple terms it moves things down (towards the center)*/
+    left: 50%;                                     /*Left 50% basically places the leftmost edge of this element at 50% of the horizontal width of the parent container (in this case, the webpage). In simple terms, it moves things right (towards the center)*/
+    transform: translate(-50%, -50%) scale(0);     /*This transforms the element based on its own height and width, translate (-50%(width), -50%(height)) basically makes the element move 50% to the left horizontally based off of their own width, and 50% horizontally upwards based off of their own height.*/
+                                                   /*transform: scale(0); makes the element invisible as it is now scaled to 0 in both horizontal and vertical axis.*/
+                                                   /*I translated the popup to the correct position (even when it's invisible) so that it lines up well with the transition.*/
+
+    z-index: 10;                                   /*This establishes a high priority for the popup, ensuring it hovers over everything else on the webpage*/
+    background-color:whitesmoke;                 /*giving the overlay color so that it doesn't blend in with the overlay, customized 6 elements below)*/
+    transition: 200ms ease-in-out;                 /*This creates a very smooth transition when the overlay opens and when it closes.*/
+}
+
+.lego_popup.active{
+
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.lego_popup_header{
+
+    padding: 10px;                                 /*padding is the space between the edge of the element border and the text within*/
+    display: flex;                                 /*I'm gonna be honest display:inline should be the one that works and makes everything appear on the same line, but for some odd reason display:flex is the only thing that's working*/
+    justify-content: space-between;                
+    align-items: center;
+    border-bottom: 1px dotted black;
+}
+
+.lego_popup_title{
+
+    font-size: 15;
+    font-weight: bold;
+}
+
+.close-button1{
+    cursor: pointer;  /*Makes the cursor go from a standard cursor to a hand pointing cursor, making the user realize that the area is clickable*/
+    border: none;     /*removing border, outline, background makes everything around the x (&times) making it look cooler.*/
+    outline: none;
+    background: none;
+    font-weight: bold;
+}
+
+.lego_popup_body{
+
+    padding: 10px;
+}
+
+#overlay{               /*if you want to use an element's id instead of class then use '#" instead of '.'*/
+    position: fixed;
+    opacity: 0;       /*by default, it is invisible, hence opacity is 0. It will be converted into 1 by javascript when overlay will be assigned the active class (overlay.active) which is configured below.*/
+    top: 0;           /*Setting the top, right, left, and bottom all to 0 pushes the over lay towards the max position on the screen from all sides, i.e it covers the entire screen*/
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0 ,0 , .5);  /*The reason I chose to set the color in (0,0,0,.5) manner is because I can control the opacity(alpha) which is set to 0.5 or 50% making the overlay look nice.*/
+    pointer-events: none;    /*makes it so that when the overlay is active, Which is all the time since the only thing changing when you click Lego Tutorial Button, the overlay's color changes from 100% transparent to 50%. When the overlay is active, the mouse pointer still changes for clickable things*/
+    transition: 200ms ease-in-out;
+}
+
+#overlay.active{
+
+    opacity: 1;             /*1 makes it visible */
+    pointer-events: all;    /*This makes it impossible for the user to click the background elements that are encompassed in the overlay*/
+}
+
+/*The rest of these css elements have been styled the same way as lego_popup, lego_popup_title, and everything lego_popup related.*/
+
+.hazards_popup {
+
+    position: fixed;
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 400px;
+    width: 500px;
+    max-width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);    
+    z-index: 10;                         
+    background-color:whitesmoke;
+    transition: 200ms ease-in-out;
+}
+
+.hazards_popup.active{
+
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.hazards_popup_header{
+
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 2;
+    border-bottom: 1px dotted black;
+
+}
+
+.hazards_popup_title{
+
+    font-size: 15;
+    font-weight: bold;
+}
+
+.close-button2{
+    cursor: pointer;  
+    border: none;
+    outline: none;
+    background: none;
+    font-weight: bold;
+}
+
+.hazards_popup_body{
+
+    padding: 10px;
+}
+
+.refund_popup {
+
+    position: fixed;
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 400px;
+    width: 500px;
+    max-width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);    
+    z-index: 10;                       
+    background-color:whitesmoke;
+    transition: 200ms ease-in-out;
+}
+
+.refund_popup.active{
+
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.refund_popup_header{
+
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px dotted black;
+
+}
+
+.refund_popup_title{
+
+    font-size: 15;
+    font-weight: bold;
+}
+
+.close-button3{
+    cursor: pointer;  
+    border: none;
+    outline: none;
+    background: none;
+    font-weight: bold;
+}
+
+.refund_popup_body{
+
+    padding: 10px;
+}
